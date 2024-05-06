@@ -1,0 +1,34 @@
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.banner-title {
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    /* text-align: left; */
+    margin-left: 80px;
+    color: #AB0112;
+}
+.banner-title h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.banner-title h2 {
+    font-size: 18px;
+    color: #067706;
+    text-align: center;
+}
+.banner-logo {
+    display: flex;
+    align-items: center;
+}
+.banner-logo img {
+    width: 150px;
+    height: auto;
+}
+.banner-telugutitle {
+    color: #0415AB;
+    text-align: center;
+}
