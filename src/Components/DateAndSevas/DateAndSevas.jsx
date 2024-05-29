@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import './DateAndSevas.css'
+import arrow from '../../assets/arrow_icon.png';
 
 const DateAndSevas = () => {
   const [name, setName] = useState('');
@@ -42,17 +43,19 @@ const DateAndSevas = () => {
   };
 
   return (
-    <div className="seva-selection">
+    <div>
+  <div className="seva-selection">
+    <div className="input-row">
       <div className="name-field">
         <label className='label' htmlFor="name">Name:</label>
         <input type="text" placeholder='Enter Your Name' id="name" value={name} onChange={handleNameChange} />
       </div>
       <div className="name-field">
-        <label className='label' htmlFor="name">Phone No:</label>
+        <label className='phone-label' htmlFor="name">Phone No:</label>
         <input type="text" placeholder='Enter Your Number' id="name" value={number} onChange={handleNumberChange} />
       </div>
       <div className="seva-section">
-        <label className="label">List of Sevas:</label>
+        <label className="seva-label">List of Sevas:</label>
         <select value={selectedSeva} onChange={handleSevaChange}>
           <option value="">Select Seva</option>
           {sevas.map((seva) => (
@@ -62,6 +65,8 @@ const DateAndSevas = () => {
           ))}
         </select>
       </div>
+    </div>
+    <div className="input-row">
       {selectedSeva && ( // Conditionally render ticket selection and total price
         <>
           <div className="ticket-selection">
@@ -78,21 +83,24 @@ const DateAndSevas = () => {
               </button>
             </div>
           </div>
+          <div className="summary-section">
+            {selectedSeva && ( // Conditionally render total price and button
+              <>
+                <div className="total-price">
+                  <p className='label'>Total Price: ₹{calculateTotalPrice()}</p>
+                </div>
+                <button type="button" disabled={!selectedSeva || numTickets <= 0} className='payment-btn'>
+                  Make Payment <img src={arrow} alt="" />
+                </button>
+              </>
+            )}
+          </div>
         </>
       )}
-      <div className="summary-section">
-        {selectedSeva && ( // Conditionally render total price and button
-          <>
-            <div className="total-price">
-              <p>Total Price: ₹{calculateTotalPrice()}</p>
-            </div>
-            <button type="button" disabled={!selectedSeva || numTickets <= 0}>
-              Make Payment
-            </button>
-          </>
-        )}
-      </div>
     </div>
+  </div>
+</div>
+
   );
 };
 

@@ -8,7 +8,11 @@
   border-radius: 5px;
 }
 
-.date-field,
+.input-row {
+  display: flex;
+  gap: 2rem;
+}
+
 .name-field,
 .seva-section {
   display: flex;
@@ -22,16 +26,66 @@
   font-weight: 800;
 }
 
-.date-picker {
+.phone-label {
+  width: 80px;
+  margin-right: 0px;
+  font-size: 16px;
+  padding-right: 0px;
+  font-weight: 800;
+}
+
+.seva-label {
+  width: 100px;
+  margin-right: 0px;
+  font-size: 16px;
+  padding-right: 0px;
+  font-weight: 800;
+}
+
+.name-field input,
+.seva-section select {
   border: none;
   width: 200px;
   height: 28px;
   padding-left: 20px;
-  margin-left: 20px;
   background: #e0e0e0;
   border-radius: 4px;
   color: #000;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.ticket-selection,
+.summary-section {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-controls {
+  margin-left: 20px;
+}
+
+.ticket-count {
+  padding: 10px;
+}
+
+.total-price {
+  padding-left: 60px;
+}
+
+.payment-btn {
+  margin-left: 90px;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  font-size: 16px;
+  display: flex;
+  padding: 15px 20px;
+  gap: 5px;
+  align-items: center;
 }
 
 .name-field input {
