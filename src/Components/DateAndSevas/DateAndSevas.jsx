@@ -51,7 +51,7 @@ const DateAndSevas = () => {
         <input type="text" placeholder='Enter Your Name' id="name" value={name} onChange={handleNameChange} />
       </div>
       <div className="name-field">
-        <label className='phone-label' htmlFor="name">Phone No:</label>
+        <label className='phone-label' htmlFor="name">Mobile No:</label>
         <input type="text" placeholder='Enter Your Number' id="name" value={number} onChange={handleNumberChange} />
       </div>
       <div className="seva-section">
